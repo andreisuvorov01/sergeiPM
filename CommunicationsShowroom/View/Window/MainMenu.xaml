@@ -1,0 +1,150 @@
+﻿<Window x:Class="CommunicationsShowroom.View.Window.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommunicationsShowroom.View.Window"
+        mc:Ignorable="d"
+         Icon="/Image/icon.ico"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowChrome.IsHitTestVisibleInChrome="True"
+        Title="Меню" Height="490" Width="800">
+    <Border  BorderThickness="2" BorderBrush="Black" >
+        <Grid  Background="#ACE1AF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="640"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DockPanel HorizontalAlignment="Stretch"
+           VerticalAlignment="Stretch"
+           LastChildFill="True"
+            Height="30"
+            Grid.Row="0"
+                       Grid.ColumnSpan="3">
+                <!--MouseDown="Drag"-->
+                <Grid DockPanel.Dock="Right"
+                   Background="#573595">
+                    <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Height="30">
+
+                        <Label
+                            Name="Position"
+                   VerticalAlignment="Center" 
+                            FontSize="13"
+                            FontStyle="Italic"
+                    Foreground="Black"
+                    Content="." FontFamily="Edwardian Script ITC"
+                            />
+                        <Button x:Name="MinimizeButton"
+                    KeyboardNavigation.IsTabStop="False"
+                    Width="20"
+                    Height="20"
+                    Background="#47ba44"
+                    Click="MinimizeWindow_Click"
+                    Margin="4,0,4,0" Style="{DynamicResource ButtonStyleAll}">
+                            <Image  Source="/Image/minimize.png"  Width="10" Height="10" HorizontalAlignment="Center"/>
+                        </Button>
+                        <Button x:Name="CloseButton"
+                    KeyboardNavigation.IsTabStop="False"
+                    Width="20"
+                    Height="20"
+                    Margin="4,0,4,0"
+                    Background="#47ba44"
+                    Click="CloseApp_Click" Style="{DynamicResource ButtonStyleAll}">
+                            <Image Source="/Image/close.png" Width="10" Height="10" HorizontalAlignment="Center"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
+            <ComboBox
+                Name="TableComboAdmin"
+                Grid.Column="2"
+                Grid.Row="1"
+                Height="40"
+                FontSize="13"
+                Background="#47ba44"
+                FontStyle="Normal"
+                FontFamily="Nunito"
+                VerticalAlignment="Top"
+                SelectionChanged="adminComboBox_SelectionChanged"
+                />
+            <Frame
+               Background="#ACE1AF"
+                x:Name="FramePageAdmin"
+                Grid.Row="1"
+                Grid.Column="0"   
+                />
+            <Button
+            Width="150"
+            Height="40"
+            Margin="0,50,0,0"
+            FontSize="17"
+            Grid.Column="1"
+            Grid.Row="1"
+            Name="InsertButton"
+            Content="Добавить"
+            Visibility="Hidden"
+            Click="InsertButton_Click"
+            Background="#8c82af"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center" Style="{DynamicResource ButtonStyleAll}"/>
+            <Button
+            Width="150"
+            Grid.Row="1"
+            Height="40"
+            FontSize="17"
+            Grid.Column="1"
+            Margin="0,150,0,0"
+            Name="DeleteButton"
+            Visibility="Hidden"
+            Click="DeleteButton_Click"
+            Content="Удалить"
+            Background="#8c82af"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center" Style="{DynamicResource ButtonStyleAll}"
+                
+                Command="{Binding DataContext.DeleteCommand, ElementName=FramePageAdmin}"
+        DataContext="{Binding DataContext, ElementName=FramePageAdmin}"/>
+            <Button
+            Width="150"
+            Grid.Row="1"
+            Grid.Column="1"
+            Height="40"
+            FontSize="17"
+            Margin="0,100,0,0"
+            Visibility="Hidden"
+            Name="EditButton"
+            Click="EditButton_Click"
+            Content="Редактировать"
+            VerticalAlignment="Top"
+            Background="#8c82af"
+            HorizontalAlignment="Center" Style="{DynamicResource ButtonStyleAll}"
+/>
+            <Button
+                    Click="backButton_Click"
+                    x:Name="BackButton"
+                    Width="20"
+                    Height="20"
+                    Background="#47ba44"
+                    Margin="4,0,600,0"     
+                    KeyboardNavigation.IsTabStop="False" Style="{DynamicResource ButtonStyleAll}">
+                <Image Source="/Image/back.png"/>
+            </Button>
+            <!--<Frame
+                Opacity="1"
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="InfoUser"
+                VerticalAlignment="Bottom"
+                Margin="0,250,0,0"/>-->
+        </Grid>
+    </Border>
+</Window>

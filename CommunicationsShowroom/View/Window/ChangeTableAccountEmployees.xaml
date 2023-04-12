@@ -1,0 +1,128 @@
+﻿<Window x:Class="CommunicationsShowroom.View.Window.ChangeTableAccountEmployees"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommunicationsShowroom.View.Window"
+        mc:Ignorable="d"
+        Icon="/Image/icon.ico"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowChrome.IsHitTestVisibleInChrome="True"
+         Title="Добавления данных" Height="520" Width="300">
+    <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5">
+        <Grid Background="#ACE1AF">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <DockPanel HorizontalAlignment="Stretch"
+           VerticalAlignment="Stretch"
+           LastChildFill="True"
+            Height="30"
+            Grid.Row="0">
+                <Grid DockPanel.Dock="Right"
+                   Background="#573595">
+                    <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Height="20">
+                        <Button x:Name="MinimizeButton"
+                    KeyboardNavigation.IsTabStop="False"
+                    Width="20"
+                    Height="20"
+                    Background="#47ba44"
+                    Click="MinimizeWindow_Click"
+                    Margin="4,0,4,0" Style="{DynamicResource ButtonStyleAll}">
+                            <Image  Source="/Image/minimize.png"/>
+                        </Button>
+                        <Button x:Name="CloseButton"
+                    KeyboardNavigation.IsTabStop="False"
+                   Width="20"
+                    Height="20"
+                    Margin="4,0,4,0"
+                    Background="#47ba44"
+                    Click="CloseApp_Click" Style="{DynamicResource ButtonStyleAll}">
+                            <Image Source="/Image/close.png"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
+
+            <StackPanel
+            Grid.Row="1"
+             Margin="10">
+                <Label
+                Content="Логин"
+                    FontSize="18"
+                Foreground="Black"
+                />
+                <TextBox
+                Height="23"
+               
+                Text="{Binding LoginEmployees}"
+                />
+            </StackPanel>
+            <StackPanel Grid.Row="2"  Margin="10">
+                <Label
+                Content="Пароль"
+                    FontSize="18"
+                    Foreground="Black"
+                />
+                <TextBox
+                Height="23"
+               
+                Text="{Binding PasswordEmployees}"
+                />
+            </StackPanel>
+            <StackPanel
+             Margin="10"
+            Grid.Row="3" >
+                <Label
+                Content="Id Сотрудника"
+                    FontSize="18"
+                    Foreground="Black"
+                />
+                <TextBox
+                Height="23"
+               
+                Text="{Binding Id_Employees}"
+                />
+            </StackPanel>
+            <StackPanel
+             Margin="10"
+            Grid.Row="4" >
+                <Label
+                Content="Статус"
+                    FontSize="18"
+                    Foreground="Black"
+                />
+                <TextBox
+                Height="23"
+                
+                Text="{Binding Id_Status}"
+                />
+            </StackPanel>
+
+            <Button
+            Background="#47ba44"
+            FontStyle="Italic"
+            Grid.Row="5"
+            Name="btnSave"
+            Click="btnSaveAccount_Click"
+            Width="90"
+            Margin="10"
+            Height="30"
+            FontSize="14"
+            HorizontalAlignment="Right"
+            Content="Сохранить"
+            />
+        </Grid>
+    </Border>
+</Window>

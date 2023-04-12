@@ -1,0 +1,45 @@
+﻿<Page x:Class="CommunicationsShowroom.View.Page.SalesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CommunicationsShowroom.View.Page"
+      mc:Ignorable="d" 
+      ShowsNavigationUI="False"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccountClientPage">
+
+    <Grid  Background="#ACE1AF">
+        <DataGrid
+          Background="#ACE1AF" 
+            IsReadOnly="True"
+            SelectedItem="{Binding SelectSales}"
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding Sales}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Дата"
+                    Foreground="Black"
+                    Binding="{Binding Date}"
+                    />
+                <DataGridTextColumn
+                    Header="Id Клиента"
+                    Foreground="Black"
+                    Binding="{Binding Id_Client}" />
+                <DataGridTextColumn
+                    Header="Id Устройства"
+                    Foreground="Black"
+                    Binding="{Binding Id_Device}" />
+                <DataGridTextColumn
+                    Header="Стоимость"
+                    Foreground="Black"
+                    Binding="{Binding Price}" />
+                <DataGridTextColumn
+                    Header="Статус"
+                    Foreground="Black"
+                    Binding="{Binding Id_Status}" />
+            </DataGrid.Columns>
+        </DataGrid>
+       
+    </Grid>
+</Page>

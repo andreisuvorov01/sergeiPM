@@ -1,0 +1,60 @@
+﻿<Window x:Class="CommunicationsShowroom.View.Window.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        Title="SplashScreen" Height="450" Width="750" ContentRendered="Window_ContentRendered">
+    <materialDesign:Card UniformCornerRadius="15" Background="#c5d2ca" materialDesign:ShadowAssist.ShadowDepth="Depth5" Margin="25">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel 
+                Grid.Column="0" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Margin="50,0,0,0">
+                <WrapPanel>
+                    <Image 
+                        Source="/Image/megafon.png" 
+                        HorizontalAlignment="Left"
+                        Height="50"
+                        Width="50"/>
+                    <TextBlock
+                        Text="Салон связи"
+                        FontSize="20"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="15,0,0,0" FontFamily="Edwardian Script ITC" FontStyle="Italic"/>
+                </WrapPanel>
+                <TextBlock
+                    Text="Пожалуйста подождите..."
+                    FontSize="17"
+                    HorizontalAlignment="Left"
+                    Margin="0,30,0,15" FontStyle="Italic" TextDecorations="{x:Null}" FontFamily="Showcard Gothic"/>
+                <ProgressBar
+                    Name="progressBar"
+                    Value="0" 
+                    Height="5"
+                    Width="280"
+                    IsIndeterminate="True"/>
+            </StackPanel>
+            <StackPanel 
+                Grid.Column="1" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Height="300"
+                Width="300">
+                <Image 
+                    Source="/Image/work.png" />
+            </StackPanel>
+        </Grid>
+    </materialDesign:Card>
+</Window>

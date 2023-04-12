@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="53ab7109a6b141998241e316bc71cdb3" Name="Diagram1" ZoomLevel="114">
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.AccountClient" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.AccountEmployees" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.Client" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.Device" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.InfoEmployees" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.OrdersStatus" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.RepairOrders" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.Sales" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.SalesStatus" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CommunicationsShowroomModel.StatusAccount" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__AccountCl__Id_Cl__4C6B5938" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__AccountCl__Id_St__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__AccountEm__Id_Em__503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__AccountEm__Id_St__4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__RepairOrd__Id_Cl__30C33EC3" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__Sales__Id_Client__37703C52" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__InfoEmplo__Goods__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__RepairOrd__Id_De__2FCF1A8A" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__Sales__Id_Device__367C1819" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__RepairOrd__Id_St__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__Sales__Id_Status__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="CommunicationsShowroomModel.FK__Sales__Id_Status__3864608B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
